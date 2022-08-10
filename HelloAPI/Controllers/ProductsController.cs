@@ -1,6 +1,7 @@
 ﻿using HelloAPI.ApiModel;
 using HelloAPI.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace HelloAPI.Controllers
 {
@@ -18,6 +19,9 @@ namespace HelloAPI.Controllers
         [HttpGet]
         public IEnumerable<Product> GetProducts(string category = "all")
         {
+            Log.Information("Starting Products controller {category}", category);
+            Log.ForContext("Category", category).Information("Starting Products controller ");
+
             return _productLogic.GetProductsForCategory(category);
         }
     }

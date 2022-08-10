@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "InvoiceGen": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

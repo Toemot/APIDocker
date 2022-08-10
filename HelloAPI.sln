@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAPI", "HelloAPI\HelloAPI.csproj", "{EB083A6A-AFDD-46FC-BC74-69FC728C10A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloAPI", "HelloAPI\HelloAPI.csproj", "{EB083A6A-AFDD-46FC-BC74-69FC728C10A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceGen", "InvoiceGen\InvoiceGen.csproj", "{9AE825AA-08E5-4605-A9C2-03B748A28493}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessorGen", "ProcessorGen\ProcessorGen.csproj", "{A25153AC-231B-448F-94A4-07B857710B43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EB083A6A-AFDD-46FC-BC74-69FC728C10A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB083A6A-AFDD-46FC-BC74-69FC728C10A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB083A6A-AFDD-46FC-BC74-69FC728C10A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE825AA-08E5-4605-A9C2-03B748A28493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE825AA-08E5-4605-A9C2-03B748A28493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE825AA-08E5-4605-A9C2-03B748A28493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE825AA-08E5-4605-A9C2-03B748A28493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A25153AC-231B-448F-94A4-07B857710B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A25153AC-231B-448F-94A4-07B857710B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A25153AC-231B-448F-94A4-07B857710B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A25153AC-231B-448F-94A4-07B857710B43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
