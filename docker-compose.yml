@@ -1,0 +1,59 @@
+version: '3.4'
+
+services:
+  helloapi:
+    build:
+      context: .
+      dockerfile: HelloAPI/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - SimpleProperty= "hi-there"
+    depends_on:
+      - seq_in_dc
+      - rabbit_in_dc
+      
+  helloapp:
+    build:
+      context: .
+      dockerfile: WebApplication1/Dockerfile
+    ports:
+      - "8081:80"
+    depends_on:
+      - seq_in_dc
+
+  processorgen:
+    build:
+      context: .
+      dockerfile: ProcessorGen/Dockerfile
+    depends_on:
+      - seq_in_dc
+      - rabbit_in_dc
+      - sql_in_dc
+
+  seq_in_dc:
+    image: datalust/seq
+    ports:
+      - '8005:80'
+    environment:
+      - ACCEPT_EULA=Y
+
+  rabbit_in_dc:
+    image: rabbitmq:3-management
+    ports:
+      - 8080:15672 
+
+  sql_in_dc:
+    build:
+      context: .
+      dockerfile: sql/sql.Dockerfile
+    restart: always
+    ports:
+      - "1440:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SqlC0ntainersFTW!
+
+
+  
+

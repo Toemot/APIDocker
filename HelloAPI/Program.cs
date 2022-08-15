@@ -36,12 +36,12 @@ Log.Logger = new LoggerConfiguration()
     .Enrich.WithProperty("Assembly", name)
     .Enrich.FromLogContext()
     .WriteTo.Console()
-    .WriteTo.Seq(serverUrl: "http://host.docker.internal:5341")
+    .WriteTo.Seq(serverUrl: "http://seq_in_dc:5341")
     .CreateBootstrapLogger();
 
 builder.Host.UseSerilog((hostContext, services, configuration) => {
     configuration.WriteTo.Console()
-    .WriteTo.Seq(serverUrl: "http://host.docker.internal:5341");
+    .WriteTo.Seq(serverUrl: "http://seq_in_dc:5341");
 });
 
 var app = builder.Build();
